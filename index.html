@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple To‑Do (localStorage)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>To‑Do List (localStorage)</h1>
+
+    <!-- Simple form to add a task -->
+    <form id="task-form" aria-label="Add task form">
+      <input id="task-input" type="text" placeholder="Write a new task..." autocomplete="off" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Filters -->
+    <div class="controls">
+      <div class="filters">
+        <button data-filter="all" class="filter-btn active">All</button>
+        <button data-filter="active" class="filter-btn">Active</button>
+        <button data-filter="completed" class="filter-btn">Completed</button>
+      </div>
+      <div class="actions">
+        <button id="clear-completed">Clear completed</button>
+      </div>
+    </div>
+
+    <!-- List -->
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+    <!-- Footer / status -->
+    <div class="footer">
+      <span id="count"></span>
+      <small class="muted">Tasks are saved in your browser (localStorage).</small>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Simple, clean styles — junior-friendly and commented */
+
+/* Basic layout */
+:root{
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent: #2b7cff;
+  --muted: #6b7280;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+body{background:var(--bg);display:flex;align-items:flex-start;justify-content:center;padding:40px 16px}
+
+/* Container */
+.container{
+  width:100%;
+  max-width:680px;
+  background:var(--card);
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(20,20,30,0.06);
+}
+
+/* Header */
+h1{margin:0 0 12px;font-size:1.3rem}
+
+/* Form */
+#task-form{display:flex;gap:8px;margin-bottom:14px}
+#task-input{flex:1;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:1rem}
+#task-form button{padding:10px 14px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+
+/* Controls */
+.controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.filters{display:flex;gap:6px}
+.filter-btn{padding:6px 10px;border-radius:6px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.actions button{padding:6px 10px;border-radius:6px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+
+/* Task list */
+.task-list{list-style:none;padding:0;margin:0}
+.task-item{display:flex;align-items:center;gap:12px;padding:10px;border-bottom:1px solid #f3f4f6}
+.task-item:last-child{border-bottom:none}
+.task-item .text{flex:1}
+.task-item.completed .text{text-decoration:line-through;opacity:0.6}
+.task-item button{border:none;background:transparent;cursor:pointer;color:var(--muted)}
+
+/* Small UI niceties */
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted)}
+.muted{color:var(--muted);font-size:0.85rem}
+
+/* Edit input */
+.edit-input{width:100%;padding:6px;border:1px solid #e5e7eb;border-radius:6px}
